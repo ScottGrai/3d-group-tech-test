@@ -1,0 +1,5 @@
+/* Feel free to use any styles and styling approach that you wish. */
+/* If you enjoy using tailwind, we have preconfigured this for you. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "tech-test-express-api",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - tech-test-express-api",
+			"detail": "npm run tsc --noEmitOnError"
+		}
+	]
+}
