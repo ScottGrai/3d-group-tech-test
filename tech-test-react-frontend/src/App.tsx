@@ -23,8 +23,8 @@ function App() {
         setData(response.data as ITableData[]);
         setErrorMsg("");
       }
-    } catch (error) {
-      setErrorMsg("Error!");
+    } catch (error: any) {
+      setErrorMsg(`Error: ${error.code}. ${error.message}.`);
     }
   };
 

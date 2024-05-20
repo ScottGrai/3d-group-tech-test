@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Alert, Badge, Button, Flex, Menu, Modal, Table, Text } from "@mantine/core";
+import { Alert, Badge, Button, Flex, Menu, Modal, Table } from "@mantine/core";
 import { EStatus, ITableData } from "../descriptors/TableModels";
 
 
