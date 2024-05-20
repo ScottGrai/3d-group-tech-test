@@ -38,6 +38,7 @@ function TableComponent({ data }: { data: Array<ITableData> }) {
     }
   };
 
+  // Dynamic colours for status text
   const assignStatusColor = (statusText: EStatus) => {
     switch(statusText) {
       case EStatus.active:
@@ -51,6 +52,7 @@ function TableComponent({ data }: { data: Array<ITableData> }) {
     }
   };
 
+  // Build out table's rows using incoming table data
   const rows = tableData.map((row) => {
     const categoriesFormatted = row.categories.join(", ");
 
@@ -74,7 +76,9 @@ function TableComponent({ data }: { data: Array<ITableData> }) {
           <Table.Td>{row.priceInPounds}</Table.Td>
           <Table.Td>{categoriesFormatted}</Table.Td>
           <Table.Td>
-            <Badge color={assignStatusColor(EStatus[row.status])}>{EStatus[row.status]}</Badge>
+            <Badge color={assignStatusColor(EStatus[row.status])}>
+              {EStatus[row.status]}
+            </Badge>
           </Table.Td>
           <Table.Td>
             <Menu>
@@ -102,6 +106,7 @@ function TableComponent({ data }: { data: Array<ITableData> }) {
     );
   });
 
+  // Top level page component
   return (
     <>
       {displayAlert && <Alert variant="light" color="red" withCloseButton title="Deleted" onClose={() => setDisplayAlert(false)}>
